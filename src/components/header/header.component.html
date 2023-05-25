@@ -1,0 +1,37 @@
+<div class="images">
+  <a [routerLink]="['/']" routerLinkActive="router-link-active">
+    <img id="logo" src="../../assets/shared/logo.svg" alt="Logo">
+  </a>
+</div>
+<div class="navigations">
+  <img id="menu" src="../../assets/shared/icon-hamburger.svg" alt="Menu">
+  <nav>
+    <ul>
+      <li>
+        <a (click)="changeActivePage($event)" #homePage [routerLink]="['/']" routerLinkActive="router-link-active">
+          <span>00</span>
+          Home
+        </a>
+      </li>
+      <li>
+        <a (click)="changeActivePage($event)" #destinationPage [routerLink]="['/destination']" routerLinkActive="router-link-active">
+          <span>01</span>
+          Destination
+        </a>
+      </li>
+      <li>
+        <a (click)="changeActivePage($event)" #crewPage [routerLink]="['/crew']" routerLinkActive="router-link-active">
+          <span>02</span>
+          Crew
+        </a>
+      </li>
+      <li>
+        <a (click)="changeActivePage($event)" #technologyPage [routerLink]="['/technology']" routerLinkActive="router-link-active">
+          <span>03</span>
+          Technology
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+

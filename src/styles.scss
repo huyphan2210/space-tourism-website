@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&family=Bellefair&display=swap');
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+h1, h2, h3, h4, button {
+  font-family: Bellefair, sans-serif;
+}
+
+h1 {
+  font-size: 9.375rem;
+}
+
+h2 {
+  font-size: 6.25rem;
+}
+
+h3 {
+  font-size: 3.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2.75rem;
+  letter-spacing: 4.75px;
+}
+
+p {
+  font-family: 'Barlow', sans-serif;
+  line-height: 2rem;
+}
+
+button {
+  border: solid 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    position: absolute;
+    width: calc(100% - 6rem);
+  }
+
+  footer {
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 1vh;
+  }
+
+
