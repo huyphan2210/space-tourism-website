@@ -5,6 +5,7 @@ body {
   min-height: 100vh;
   margin: 0;
   position: relative;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, button {
@@ -50,9 +51,21 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem;
+    padding: 3rem 0 3rem 3rem;
     position: absolute;
-    width: calc(100% - 6rem);
+    width: calc(100% - 3rem);
+
+    &::before {
+      content: '';
+      width: 35%;
+      height: 0.1rem;
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translate(0, -50%);
+      background-color: gray;
+      z-index: 1;
+    }
   }
 
   footer {
@@ -63,5 +76,26 @@ button {
     text-align: center;
     bottom: 1vh;
   }
+
+@media screen and (max-aspect-ratio: 1) {
+  header {
+    &::before {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 912px) {
+    header {
+      padding: 0 0 0 2rem;
+
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    header {
+      padding: 2rem;
+      width: calc(100% - 4rem);
+    }
+  }
+}
 
 

@@ -1,5 +1,4 @@
 .images {
-
   #logo {
     max-width: 3rem;
     border-radius: 50%;
@@ -16,6 +15,10 @@
 
   nav {
     padding: 2rem 7rem;
+
+    #close-menu {
+      display: none;
+    }
 
     ul {
       margin-block: 0;
@@ -80,5 +83,62 @@
     }
   }
 }
+
+@media screen and (max-aspect-ratio: 1) {
+  @media screen and (min-width: 768px) and (max-width: 912px) {
+    .navigations {
+      nav {
+        padding: 2rem;
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .navigations {
+      backdrop-filter: none;
+      width: unset;
+      #menu {
+        display: block;
+      }
+
+      nav {
+        backdrop-filter: blur(0.6rem);
+        padding: 2rem;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: calc(60% - 4rem);
+        height: calc(100vh - 4rem);
+        transition: 1s;
+        opacity: 0;
+        display: none;
+
+        #close-menu {
+          display: block;
+          float: right;
+        }
+
+        ul {
+          display: block;
+          margin-block-start: 4rem;
+
+          li {
+            margin-block: 2rem;
+
+            a::before, a::after {
+              display: none !important;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+
 
 

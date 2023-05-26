@@ -16,6 +16,8 @@ export class Header implements AfterViewInit {
 
   @ViewChild('technologyPage') technologyPage?: ElementRef<HTMLAnchorElement>;
 
+  @ViewChild('nav') nav?: ElementRef<HTMLElement>;
+
   ngAfterViewInit(): void {
     switch (this.router.url.replace('/', '')) {
       case 'destination':
@@ -64,6 +66,29 @@ export class Header implements AfterViewInit {
         this.destinationPage?.nativeElement.setAttribute('class', '');
         break;
       }
+    }
+  }
+
+  public openMenu() {
+    if (this.nav) {
+      const nav = this.nav.nativeElement;
+      nav.style.display = 'block';
+      setTimeout(() => {
+        nav.style.opacity = '1';
+        nav.style.transform = 'translate(-100%)';
+      }, 0)
+    }
+
+  }
+
+  public closeMenu() {
+    if (this.nav) {
+      const nav = this.nav.nativeElement;
+      this.nav.nativeElement.style.opacity = '';
+      this.nav.nativeElement.style.transform = '';
+      setTimeout(() => {
+        nav.style.display = '';
+      }, 1000)
     }
   }
 

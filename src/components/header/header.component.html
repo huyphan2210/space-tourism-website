@@ -4,8 +4,9 @@
   </a>
 </div>
 <div class="navigations">
-  <img id="menu" src="../../assets/shared/icon-hamburger.svg" alt="Menu">
-  <nav>
+  <img (click)="openMenu()" id="menu" src="../../assets/shared/icon-hamburger.svg" alt="Menu">
+  <nav #nav>
+    <img (click)="closeMenu()" id="close-menu" src="../../assets/shared/icon-close.svg" alt="Close Menu">
     <ul>
       <li>
         <a (click)="changeActivePage($event)" #homePage [routerLink]="['/']" routerLinkActive="router-link-active">

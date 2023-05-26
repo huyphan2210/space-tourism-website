@@ -4,3 +4,17 @@
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
+
+@media screen and (max-aspect-ratio: 1) {
+  @media screen and (min-width: 768px) and (max-width: 912px) {
+    .technology {
+      background-image: url(../../assets/technology/background-technology-tablet.jpg);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .technology {
+      background-image: url(../../assets/technology/background-technology-mobile.jpg);
+    }
+  }
+}
