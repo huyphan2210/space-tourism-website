@@ -1,20 +1,110 @@
 .home {
-  min-height: 100vh;
+  min-height: calc(100vh - 20vw);
   background-image: url(../../assets/home/background-home-desktop.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  padding: 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  align-items: end;
+
+  .space {
+    h1 {
+      margin-block: 2rem;
+    }
+  }
+
+  .explore {
+    a {
+      position: relative;
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      aspect-ratio: 1;
+      padding: 4rem;
+      border-radius: 50%;
+      float: right;
+      color: #0B0D17;
+      text-decoration: none;
+      background-color: white;
+      display: grid;
+      place-items: center;
+
+      // &::before {
+      //   position: absolute;
+      //   content: "";
+      //   width: 100%;
+      //   aspect-ratio: 1;
+      //   border-radius: 50%;
+      //   background-color: #979797;
+      //   z-index: 0;
+      //   transition: 1s;
+      // }
+
+      // &:hover {
+      //   &::before {
+      //     width: 150%;
+      //   }
+      // }
+    }
+
+
+
+
+
+  }
 }
 
 @media screen and (max-aspect-ratio: 1) {
+  .home {
+    grid-template-columns: auto;
+    text-align: center;
+
+    .explore {
+      display: flex;
+      justify-content: center;
+      a {
+        float: unset;
+        max-width: 25vw;
+      }
+    }
+  }
+
   @media screen and (min-width: 768px) and (max-width: 912px) {
     .home {
       background-image: url(../../assets/home/background-home-tablet.jpg);
+    }
+
+    .explore {
+      a {
+        font-size: 1.25rem;
+        padding: 3rem;
+      }
     }
   }
 
   @media screen and (max-width: 767px) {
     .home {
       background-image: url(../../assets/home/background-home-mobile.jpg);
+      padding-inline: 1.5rem;
+      padding-block: 4rem;
+      min-height: calc(100vh - 8rem);
+
+      .space {
+        h1 {
+          font-size: 5rem;
+        }
+        h5 {
+          font-size: 1rem;
+        }
+      }
+
+      .explore {
+        a {
+          font-size: 1.25rem;
+          padding: 2rem;
+        }
+      }
     }
   }
 }
