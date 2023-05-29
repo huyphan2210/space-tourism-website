@@ -1,6 +1,22 @@
 <section class="destination">
-  <div class="planet">
-    <h5><span>01</span> Pick your destination</h5>
+  <div class="destination-title">
+    <h1><span>01</span> Pick your destination</h1>
   </div>
-  <div class="planet-description"></div>
+  <div class="destination-planet">
+    <img src="{{planet.images.png}}" alt="{{planet.name}}">
+    <div class="destination-planet-content">
+      <div class="destination-planet-tabs">
+        <button (click)="setActive($event, i)" type="button" *ngFor="let tab of tabNames; index as i">
+          {{tab}}
+        </button>
+      </div>
+      <destination-content
+        [planetName]="planet.name"
+        [planetDescription]="planet.description"
+        [planetDistance]="planet.distance"
+        [planetTravelTime]="planet.travel"
+      ></destination-content>
+    </div>
+  </div>
+
 </section>

@@ -19,6 +19,7 @@ h1 {
 
 h2 {
   font-size: 6.25rem;
+  color: white;
 }
 
 h3 {
@@ -86,13 +87,22 @@ button {
       display: none;
     }
   }
+
   @media screen and (min-width: 768px) and (max-width: 912px) {
+    body {
+      overflow: scroll;
+    }
+
     header {
       padding: 0 0 0 2rem;
     }
   }
 
   @media screen and (max-width: 767px) {
+    body {
+      overflow: scroll;
+    }
+
     header {
       padding: 1.5rem;
     }

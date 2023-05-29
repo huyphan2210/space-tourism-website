@@ -1,0 +1,72 @@
+.content {
+  &-general {
+    padding-block: 2rem;
+    border-block-end: solid 1px gray;
+
+    h2 {
+      text-transform: uppercase;
+      margin-block-start: 0rem;
+      margin-block-end: 1rem;
+      font-weight: 400;
+    }
+
+    p {
+      margin-block: 0;
+    }
+  }
+
+  &-info {
+    margin-block: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+
+    label {
+      font-size: 0.875rem;
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      color: #D0D6F9;
+      letter-spacing: 2.38px;
+    }
+
+    span {
+      margin-block-start: 0.75rem;
+      display: block;
+      font-family: Bellefair, sans-serif;
+      font-size: 2.25rem;
+      color: white;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and (max-aspect-ratio: 1) {
+  @media screen and (min-width: 768px) and (max-width: 912px) {
+    .content {
+      &-general {
+        h2 {
+          font-size: 5rem;
+        }
+      }
+
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .content {
+      &-general {
+        h2 {
+          font-size: 3.5rem;
+        }
+      }
+
+      &-info {
+        grid-template-columns: auto;
+
+        &-travel {
+          margin-block-start: 2rem;
+        }
+      }
+    }
+  }
+
+}
