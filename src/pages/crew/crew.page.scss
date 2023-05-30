@@ -1,8 +1,91 @@
 .crew {
-  min-height: 100vh;
+  min-height: calc(100vh - 10vw);
   background-image: url(../../assets/crew/background-crew-desktop.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  padding: 10%;
+  padding-bottom: 0;
+
+  h1 {
+    font-size: 1.75rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4.725px;
+    font-weight: 400;
+    span {
+      opacity: 0.25;
+      font-weight: 700;
+    }
+  }
+
+  &-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    &-info {
+      margin-block-start: 10rem;
+
+
+      label {
+        font-family: Bellefair, sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: white;
+        opacity: 0.5;
+      }
+
+      span {
+        display: block;
+        font-family: Bellefair, sans-serif;
+        font-weight: 400;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        color: white;
+        margin-block-start: 1rem;
+        margin-block-end: 1.5rem;
+      }
+
+      p {
+        margin-block-end: 8rem;
+      }
+
+      &-pages {
+        display: flex;
+        .page {
+          width: 1rem;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          background-color: white;
+          margin-inline: 0.75rem;
+          opacity: 0.17;
+
+          &:first-child {
+            margin-inline-start: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+            opacity: 0.5;
+          }
+        }
+
+        .active {
+          opacity: 1 !important;
+        }
+      }
+    }
+
+    &-img {
+      position: relative;
+      img {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+      }
+    }
+
+  }
 }
 
 @media screen and (max-aspect-ratio: 1) {

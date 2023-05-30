@@ -1,3 +1,16 @@
 <section class="crew">
-
+  <h1><span>02</span> Meet you crew</h1>
+  <div class="crew-content">
+    <div class="crew-content-info">
+      <label for="{{currentCrew.name}}">{{currentCrew.role}}</label>
+      <span id="{{currentCrew.name}}">{{currentCrew.name}}</span>
+      <p>{{currentCrew.bio}}</p>
+      <div class="crew-content-info-pages">
+        <div (click)="changePage($event, i)" *ngFor="let page of crew; index as i" class="page"></div>
+      </div>
+    </div>
+    <div class="crew-content-img">
+      <img src="{{currentCrew.images.png}}" alt="{{currentCrew.name}}">
+    </div>
+  </div>
 </section>
