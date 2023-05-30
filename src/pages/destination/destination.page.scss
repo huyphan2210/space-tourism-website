@@ -6,17 +6,15 @@
   padding: 10%;
   padding-bottom: 5%;
 
-  &-title {
-    h1 {
-      font-size: 1.75rem;
-      font-family: 'Barlow Condensed', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 4.725px;
-      font-weight: 400;
-      span {
-        opacity: 0.25;
-        font-weight: 700;
-      }
+  h1 {
+    font-size: 1.75rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4.725px;
+    font-weight: 400;
+    span {
+      opacity: 0.25;
+      font-weight: 700;
     }
   }
 
@@ -105,10 +103,8 @@
     .destination {
       background-image: url(../../assets/destination/background-destination-tablet.jpg);
 
-      &-title {
-        h1 {
-          font-size: 1.25rem;
-        }
+      h1 {
+        font-size: 1.25rem;
       }
     }
   }
@@ -116,13 +112,12 @@
   @media screen and (max-width: 767px) {
     .destination {
       background-image: url(../../assets/destination/background-destination-mobile.jpg);
-      padding: 1.5rem;
+      padding-inline: 1.5rem;
+      padding-block: 6rem;
 
-      &-title {
-        h1 {
-          font-size: 1rem;
-          text-align: center;
-        }
+      h1 {
+        font-size: 1rem;
+        text-align: center;
       }
 
       &-planet {
