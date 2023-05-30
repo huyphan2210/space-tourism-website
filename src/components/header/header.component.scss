@@ -101,6 +101,7 @@
     .navigations {
       backdrop-filter: none;
       width: unset;
+
       #menu {
         display: block;
       }
@@ -108,7 +109,7 @@
       nav {
         backdrop-filter: blur(0.6rem);
         padding: 2rem;
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 100%;
         width: calc(60% - 4rem);
