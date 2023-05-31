@@ -1,10 +1,5 @@
 .crew {
-  min-height: calc(100vh - 10vw);
-  background-image: url(../../assets/crew/background-crew-desktop.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  padding: 10%;
-  padding-bottom: 0;
+  padding-inline: 10%;
 
   h1 {
     font-size: 1.75rem;
@@ -21,11 +16,9 @@
   &-content {
     display: grid;
     grid-template-columns: 50% 50%;
+    margin-block-start: 10rem;
 
     &-info {
-      margin-block-start: 10rem;
-
-
       label {
         font-family: Bellefair, sans-serif;
         font-weight: 400;
@@ -52,6 +45,11 @@
 
       &-pages {
         display: flex;
+
+        &:first-child {
+          display: none;
+        }
+
         .page {
           width: 1rem;
           aspect-ratio: 1;
@@ -76,28 +74,104 @@
       }
     }
 
-    &-img {
-      position: relative;
-      img {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-      }
+    img {
+      position: absolute;
+      left: 75%;
+      width: 30%;
+      transform: translate(-50%);
+      bottom: 0;
     }
-
   }
 }
 
 @media screen and (max-aspect-ratio: 1) {
+  .crew {
+    &-content {
+      text-align: center;
+      grid-template-columns: auto;
+
+      span {
+        margin-block-start: 0.5rem;
+        margin-block-end: 1rem;
+      }
+
+      &-info {
+        margin-block-start: 2rem;
+        &-pages {
+          justify-content: center;
+        }
+      }
+
+      img {
+        position: static;
+        justify-self: center;
+        transform: none;
+      }
+    }
+  }
   @media screen and (min-width: 768px) and (max-width: 912px) {
     .crew {
-      background-image: url(../../assets/crew/background-crew-tablet.jpg);
+      &-content {
+        margin-block-start: 3.75rem;
+
+        label {
+          font-size: 1.5rem;
+        }
+
+        span {
+          font-size: 2.5rem;
+        }
+
+        img {
+          width: 80%;
+        }
+
+        &-info {
+          p {
+            margin-block-end: 2.5rem;
+          }
+        }
+      }
     }
   }
 
   @media screen and (max-width: 767px) {
     .crew {
-      background-image: url(../../assets/crew/background-crew-mobile.jpg);
+      text-align: center;
+
+      &-content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-block-start: 2rem;
+
+        img {
+          width: 80%;
+        }
+
+        label {
+          font-size: 1rem;
+        }
+
+        span {
+          font-size: 1.5rem;
+        }
+
+        &-info {
+          p {
+            margin-block-end: 2.5rem;
+          }
+
+          &-pages {
+            display: none;
+
+            &:first-child {
+              display: flex;
+              margin-block-end: 2rem;
+            }
+          }
+        }
+      }
     }
   }
 }

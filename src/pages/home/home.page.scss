@@ -1,9 +1,6 @@
 .home {
-  min-height: calc(100vh - 20vw);
-  background-image: url(../../assets/home/background-home-desktop.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  padding: 10%;
+  margin-block-start: 12.6875rem;
+  padding-inline: 10%;
   display: grid;
   grid-template-columns: repeat(2, 50%);
   align-items: end;
@@ -29,29 +26,15 @@
       background-color: white;
       display: grid;
       place-items: center;
+      outline-style: solid;
+      outline-color: rgba(255, 255, 255, 0.1);
+      outline-width: 0;
+      transition: 0.5s;
 
-      // &::before {
-      //   position: absolute;
-      //   content: "";
-      //   width: 100%;
-      //   aspect-ratio: 1;
-      //   border-radius: 50%;
-      //   background-color: #979797;
-      //   z-index: 0;
-      //   transition: 1s;
-      // }
-
-      // &:hover {
-      //   &::before {
-      //     width: 150%;
-      //   }
-      // }
+      &:hover {
+        outline-width: 3rem;
+      }
     }
-
-
-
-
-
   }
 }
 
@@ -72,22 +55,22 @@
 
   @media screen and (min-width: 768px) and (max-width: 912px) {
     .home {
-      background-image: url(../../assets/home/background-home-tablet.jpg);
-    }
+      margin-block-start: 6.625rem;
 
-    .explore {
-      a {
-        font-size: 1.25rem;
-        padding: 3rem;
+      .explore {
+        a {
+          font-size: 1.25rem;
+          padding: 3rem;
+        }
       }
     }
+
   }
 
   @media screen and (max-width: 767px) {
     .home {
-      background-image: url(../../assets/home/background-home-mobile.jpg);
+      margin-block-start: 1.5rem;
       padding-inline: 1.5rem;
-      padding-block: 4rem;
       min-height: calc(100vh - 8rem);
 
       .space {

@@ -5,7 +5,9 @@ body {
   min-height: 100vh;
   margin: 0;
   position: relative;
-  overflow: hidden;
+  background-image: url(./assets/home/background-home-desktop.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 h1, h2, h3, h4, button {
@@ -51,35 +53,45 @@ button {
   }
 }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 3rem 0 3rem 3rem;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0 3rem 3rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 35%;
+    height: 0.1rem;
     position: absolute;
-    width: calc(100% - 3rem);
-
-    &::before {
-      content: '';
-      width: 35%;
-      height: 0.1rem;
-      position: absolute;
-      top: 50%;
-      left: 10%;
-      transform: translate(0, -50%);
-      background-color: gray;
-      z-index: 1;
-    }
+    top: 50%;
+    left: 10%;
+    transform: translate(0, -50%);
+    background-color: gray;
+    z-index: 1;
   }
+}
 
+main {
+  margin-block-start: 1.75rem;
+}
+
+footer {
+  font-family: 'Barlow', sans-serif;
+  color: white;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 1vh;
+}
+
+@media screen and (min-aspect-ratio: 1) and (max-width: 1439px) {
   footer {
-    font-family: 'Barlow', sans-serif;
-    color: white;
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    bottom: 1vh;
+    position: static;
+    margin-block: 2rem;
   }
+}
 
 @media screen and (max-aspect-ratio: 1) {
   header {
@@ -96,6 +108,10 @@ button {
     header {
       padding: 0 0 0 2rem;
     }
+
+    main {
+      margin-block-start: 2.5rem;
+    }
   }
 
   @media screen and (max-width: 767px) {
@@ -105,6 +121,10 @@ button {
 
     header {
       padding: 1.5rem;
+    }
+
+    main {
+      margin-block-start: 0rem;
     }
   }
 }
