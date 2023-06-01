@@ -1,27 +1,46 @@
-# SpaceTourismWebsite
+# Frontend Mentor - Space tourism website solution
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Development server
+## Table of contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-## Code scaffolding
+## Overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### The challenge
 
-## Build
+Users should be able to:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
 
-## Running unit tests
+### Screenshot
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![](./src/assets/preview.png)
 
-## Running end-to-end tests
+### Links
+- Live Site URL: [Click here](https://space-tourism-website-tau-swart.vercel.app/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Built with
 
-## Further help
+- Angular 15
+- Scss
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### What I learned
+
+- Angular: Router
+
+## Author
+
+- Github - [Huy Phan](https://github.com/huyphan2210)
+- Frontend Mentor - [@huyphan2210](https://www.frontendmentor.io/profile/huyphan2210)
+- Linkedin - [Huy Phan](https://www.linkedin.com/in/huy-phan-7924aa25a/)
