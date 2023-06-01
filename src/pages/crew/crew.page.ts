@@ -29,6 +29,7 @@ export class CrewPage implements AfterViewInit, OnInit, OnDestroy {
 
   ngAfterViewInit(): void {
     document.getElementsByClassName('page')[0].setAttribute('class', 'page active');
+    document.getElementsByClassName('page')[4].setAttribute('class', 'page active');
   }
 
   ngOnDestroy(): void {
