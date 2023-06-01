@@ -1,1 +1,21 @@
-<section class="technology"></section>
+<section class="technology">
+  <h1><span>03</span> Space Launch 101</h1>
+  <div class="technology-content">
+    <div class="technology-content-description">
+      <div class="technology-content-description-pages">
+        <button (click)="changePage($event, i)" *ngFor="let item of technologies; index as i" class="page" type="button">
+          {{i + 1}}
+        </button>
+      </div>
+      <div class="technology-content-description-launch">
+        <label for="{{currentTechnology.name}}">The Terminology...</label>
+        <span id="{{currentTechnology.name}}">{{currentTechnology.name}}</span>
+        <p>{{currentTechnology.description}}</p>
+      </div>
+    </div>
+    <div class="technology-content-img">
+      <img *ngIf="isDesktop" src="{{currentTechnology.images.portrait}}" alt="{{currentTechnology.name}}">
+      <img *ngIf="!isDesktop" src="{{currentTechnology.images.landscape}}" alt="{{currentTechnology.name}}">
+    </div>
+  </div>
+</section>

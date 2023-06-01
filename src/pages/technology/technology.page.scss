@@ -1,17 +1,165 @@
 .technology {
+  padding-inline-start: 10%;
 
+  h1 {
+    font-size: 1.75rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4.725px;
+    font-weight: 400;
+    span {
+      opacity: 0.25;
+      font-weight: 700;
+    }
+  }
+
+  &-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 11%;
+    place-items: center;
+
+    &-description {
+      display: grid;
+      grid-template-columns: auto auto;
+      place-items: center;
+      column-gap: 5rem;
+
+      &-pages {
+        .page {
+          font-size: 2rem;
+          display: block;
+          width: 5rem;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          background-color: transparent;
+          color: white;
+          outline: solid 1px rgba(255, 255, 255, 0.25);
+          margin-block: 2rem;
+
+          &:hover {
+            outline-color: white;
+          }
+        }
+
+        .active {
+          background-color: white;
+          color: #0B0D17;
+        }
+      }
+
+      &-launch {
+        label {
+          color: #D0D6F9;
+          font-size: 1rem;
+          font-family: 'Barlow Condensed', sans-serif;
+          letter-spacing: 2.7px;
+          text-transform: uppercase;
+        }
+
+        span {
+          display: block;
+          text-transform: uppercase;
+          color: white;
+          font-size: 4rem;
+          font-family: Bellefair, sans-serif;
+          margin-block-start: 0.75rem;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-aspect-ratio: 1) {
+  .technology {
+    &-content {
+      display: flex;
+      flex-direction: column-reverse;
+
+      &-description {
+        display: flex;
+        flex-direction: column;
+        margin-block: 4rem;
+        padding-inline: 8rem;
+
+        &-pages {
+          display: flex;
+          margin-block-end: 2.75rem;
+
+          .page {
+            margin-block: 0;
+            width: 3.75rem;
+            font-size: 1.5rem;
+            margin-inline: 0.5rem;
+          }
+        }
+
+        &-launch {
+          text-align: center;
+
+          span {
+            font-size: 2.5rem;
+          }
+        }
+      }
+
+      &-img {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+    }
+  }
+
   @media screen and (min-width: 768px) and (max-width: 912px) {
     .technology {
+      padding: unset;
 
+      h1 {
+        padding: 2rem;
+      }
+
+      &-description {
+        &-pages {
+          .page {
+            width: 3.75rem;
+            font-size: 1.5rem;
+          }
+        }
+      }
     }
   }
 
   @media screen and (max-width: 767px) {
     .technology {
+      padding: unset;
 
+      h1 {
+        padding: 1.5rem;
+      }
+
+      &-content {
+        &-description {
+          margin-block: 2.125rem;
+          padding-inline: 1.5rem;
+
+          &-pages {
+            margin-block-end: 1.625rem;
+            .page {
+              width: 2.5rem;
+            }
+          }
+
+          &-launch {
+            span {
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
     }
   }
 }
